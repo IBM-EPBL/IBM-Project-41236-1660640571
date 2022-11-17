@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+
+<head>
+
+  <style>
+html {
+      background: "{% static 'assets/images/.jpg' %}";
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center bottom;
+    }
+
+    h2 {
+      color: "red";
+    }
+
+    body {
+      font-family: Arial;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center bottom;
+      background-size: 80% 100%;
+      color: rgb(255, 255, 255);
+      background-color: #002447 ;
+      background-image: url('https://previews.123rf.com/images/andreus/andreus1409/andreus140900276/31970435-human-eye-being-scanned-by-a-futuristic-interface-digital-illustration-.jpg');
+      /* background-repeat: no-repeat; */
+      /* background-size: 100% 820px" */
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      -webkit-animation: fadeEffect 1s;
+      animation: fadeEffect 1s;
+    }
+    button{
+      height: 75px;
+      width: 270px;
+      background-color: transparent;
+      font-size: large;
+      color: rgb(255, 255, 255);
+      border: 2px solid rgb(255, 255, 255);
+      
+    }
+    button:hover {
+      background-color: rgb(0, 234, 255);
+    }
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<center>
+
+  <body background="{% static 'assets/images/t.jpg' 500%}">
+
+    <h1>
+      DEEP LEARNING FUNDUS IMAGE ANALYSIS FOR DIABETIC RETINOPATHY DETECTION </h1>
+
+
+
+
+
+    <div class="text"></div>
+
+    <div class="tab">
+      <a href="/"><button class="tablinks" onclick="openCity(event, 'login')">Home</button></a>
+      <a href="{% url 'login' %}"><button class="tablinks" onclick="openCity(event, 'home')">Login</button></a>
+      <!-- <button class="tablinks" onclick="openCity(event, 'abstract')">Abstract</button> -->
+      <a href="{% url 'abstract' %}"><button class="tablinks" onclick="openCity(event, 'abstract')">Abstract</button>
+    </div>
+
+    <!-- <div id="home" class="tabcontent">
+
+      <a href="login" target="_blank">Login</a>
+    </div> -->
+
+
+    <!-- <div id="login" class="tabcontent">
+      <h3 style="color: #0080ff;"></h3>
+
+    </div> -->
+
+    <!-- <div id="abstract" class="tabcontent">
+
+      <a href="abstract" target="_blank">abstract</a>
+    </div> -->
+
+
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+
+
+</center>
+</body>
+
+</html>
